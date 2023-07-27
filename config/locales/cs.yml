@@ -29,8 +29,10 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+cs:
   hello: "Hello world"
   home: "Domů"
-  success: "Výborně!"
-  welcome: "Vitejte, tohle je aplikace pro trackování Projektů, úkolů a tagů."
+  success: "Výborně"
+  signup : "Vytvořit účet"
+  welcome: "Vítejte"
+
