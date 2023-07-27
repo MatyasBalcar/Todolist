@@ -32,4 +32,5 @@
 en:
   hello: "Hello world"
   home: "Domů"
+  success: "Výborně!"
   welcome: "Vitejte, tohle je aplikace pro trackování Projektů, úkolů a tagů."

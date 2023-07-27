@@ -32,4 +32,5 @@
 en:
   hello: "Hello world"
   home: "Home"
+  success: "Success"
   welcome: "Welcome to the todo list app built by Matyas Balcar."

@@ -12,6 +12,11 @@
 </head>
 <body>
 <%=render 'pages/header' %>
+
+<% if notice %>
+  <%= render "layouts/alerts" %>
+<%end %>
+
 <%= yield %>
 
 
