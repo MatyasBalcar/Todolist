@@ -31,5 +31,5 @@
 
 en:
   hello: "Hello world"
-  home: "Home"
-  welcome: "Welcome to the todo list app built by Matyas Balcar."
+  home: "Domů"
+  welcome: "Vitejte, tohle je aplikace pro trackování Projektů, úkolů a tagů."
