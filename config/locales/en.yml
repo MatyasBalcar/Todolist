@@ -34,4 +34,9 @@ en:
   home: "Home"
   success: "Success"
   signup : "Sign up"
+  signin: "Sign in"
+  signout: "Sign out"
+  edit: "Edit account"
+  password_minimum: "Minimum %{length} characters"
+
   welcome: "Welcome to the todo list app built by Matyas Balcar."
