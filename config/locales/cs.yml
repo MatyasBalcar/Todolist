@@ -116,6 +116,7 @@ cs:
   password_needed: "Potřebujeme vaše stávající heslo, abychom ho mohli změnit."
   cancel_account: "Zrušit úcět"
   unhappy: "Nejste spokojení?"
+  edit_user: "Upravit účet"
 
   simple_form:
     "yes": 'Ano'

@@ -46,3 +46,4 @@ en:
   password_needed: "We need your password to change it"
   welcome: "Welcome to the todo list app built by Matyas Balcar."
   cancel_account : "Cancel my account"
+  edit_user: "Edit user"
