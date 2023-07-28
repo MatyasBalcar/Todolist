@@ -9,19 +9,24 @@
       <li class="nav-item active">
         <a class="nav-link" href="#"><%=link_to t(:home), root_path, class:"navbar-brand" %> <span class="sr-only"></span></a>
       </li>
-      <li class="nav-item ">
-      <a class="nav-link" href="#"><%=link_to t(:signup), new_user_registration_path, class:"btn btn-outline-success" %> <span class="sr-only"></span></a>
-      </li>
 
-      <li class="nav-item ">
-        <a class="nav-link" href="#"><%=link_to t(:signin), new_user_session_path, class:"btn btn-outline-success" %> <span class="sr-only"></span></a>
-      </li>
+
+      <%if user_signed_in? %>
       <li class="nav-item ">
         <a class="nav-link" href="#"><%=link_to t(:signout), destroy_user_session_path,:method => :get, class:"btn btn-danger" %> <span class="sr-only"></span></a>
       </li>
       <li class="nav-item ">
       <a class="nav-link" href="#"><%=link_to t(:edit), edit_user_registration_path, class:"btn btn-outline-warning" %> <span class="sr-only"></span></a>
       </li>
+        <%else %>
+        <li class="nav-item ">
+          <a class="nav-link" href="#"><%=link_to t(:signup), new_user_registration_path, class:"btn btn-outline-success" %> <span class="sr-only"></span></a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="#"><%=link_to t(:signin), new_user_session_path, class:"btn btn-outline-success" %> <span class="sr-only"></span></a>
+        </li>
+        <%end %>
 
     </ul>
 
