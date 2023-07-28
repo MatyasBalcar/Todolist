@@ -107,9 +107,15 @@ cs:
   signin : "Přihlásit se"
   signout: "Odhlásit se"
   edit : "Upravit Účet"
+  update: "Změnit"
+  back : "Zpátky"
+
   password_minimum: "Minimálně %{length} charakterů."
   welcome: "Vítejte v aplikaci na správu projektů a jejich úkolů a tagů."
-
+  leave_blank_password: "Toto pole ponechejte prázdné, pokud nechcete heslo změnit."
+  password_needed: "Potřebujeme vaše stávající heslo, abychom ho mohli změnit."
+  cancel_account: "Zrušit úcět"
+  unhappy: "Nejste spokojení?"
 
   simple_form:
     "yes": 'Ano'

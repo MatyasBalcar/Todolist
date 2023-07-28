@@ -37,6 +37,12 @@ en:
   signin: "Sign in"
   signout: "Sign out"
   edit: "Edit account"
-  password_minimum: "Minimum %{length} characters"
+  update: "Update"
+  back : "Back"
+  unhappy : "Unhappy?"
 
+  password_minimum: "Minimum %{length} characters"
+  leave_blank_password : "Leave this blank if you dont want to change your password"
+  password_needed: "We need your password to change it"
   welcome: "Welcome to the todo list app built by Matyas Balcar."
+  cancel_account : "Cancel my account"
