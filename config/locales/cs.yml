@@ -114,9 +114,11 @@ cs:
   welcome: "Vítejte v aplikaci na správu projektů a jejich úkolů a tagů."
   leave_blank_password: "Toto pole ponechejte prázdné, pokud nechcete heslo změnit."
   password_needed: "Potřebujeme vaše stávající heslo, abychom ho mohli změnit."
-  cancel_account: "Zrušit úcět"
+  cancel_account: "Zrušit účet"
   unhappy: "Nejste spokojení?"
   edit_user: "Upravit účet"
+
+  new_project: "Vytvořit nový projekt"
 
   simple_form:
     "yes": 'Ano'

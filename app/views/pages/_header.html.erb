@@ -18,6 +18,9 @@
       <li class="nav-item ">
       <a class="nav-link" href="#"><%=link_to t(:edit), edit_user_registration_path, class:"btn btn-outline-warning" %> <span class="sr-only"></span></a>
       </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#"><%=link_to t(:new_project),new_project_path, class:"btn btn-outline-primary" %> <span class="sr-only"></span></a>
+        </li>
         <%else %>
         <li class="nav-item ">
           <a class="nav-link" href="#"><%=link_to t(:signup), new_user_registration_path, class:"btn btn-outline-success" %> <span class="sr-only"></span></a>
