@@ -121,6 +121,7 @@ cs:
   new_project: "Vytvořit nový projekt"
   projects: "Projekty"
   show_project: "Ukaž tento projekt"
+  show_projects: "Všechny projekty"
 
   simple_form:
     "yes": 'Ano'
