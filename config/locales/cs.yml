@@ -119,6 +119,8 @@ cs:
   edit_user: "Upravit účet"
 
   new_project: "Vytvořit nový projekt"
+  projects: "Projekty"
+  show_project: "Ukaž tento projekt"
 
   simple_form:
     "yes": 'Ano'

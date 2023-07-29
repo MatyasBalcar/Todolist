@@ -1,11 +1,13 @@
 p style="color: green" = notice
 
-h1 Projects
+h1 =t(:projects)
 
 #projects
   - @projects.each do |project|
-    == render project
-    p
-      = link_to "Show this project", project
 
-= link_to "New project", new_project_path
+    == render project
+    -if project.user==current_user
+      p
+        = link_to t(:shsow_project), project
+
+

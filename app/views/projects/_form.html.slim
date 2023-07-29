@@ -7,6 +7,12 @@
             required: true
     = f.input :position,
             required: true
+    = f.input :user_id,
+            required: true,
+            :input_html => { value:current_user.id},
+            id: :project_user_id
+
+
 
   .form-actions
     = f.button :submit

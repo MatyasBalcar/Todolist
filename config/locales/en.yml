@@ -49,3 +49,5 @@ en:
   edit_user: "Edit user"
 
   new_project: "Create new project"
+  projects: "Project"
+  show_project: "Show this project"

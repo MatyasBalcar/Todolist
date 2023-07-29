@@ -1,7 +1,10 @@
-div id="#{dom_id project}"
-  p
-    strong Title:
-    =< project.title
-  p
-    strong Position:
-    =< project.position
+-if project.user==current_user
+  div id="#{dom_id project}"
+    p
+      strong Title:
+      =< project.title
+    p
+      strong Position:
+      =< project.position
+
+
