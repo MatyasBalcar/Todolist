@@ -6,8 +6,7 @@ h1 =t(:projects)
   - @projects.each do |project|
 
     == render project
-    -if project.user==current_user
-      p
-        = link_to t(:show_project), project
+
+
 
 

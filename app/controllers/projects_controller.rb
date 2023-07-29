@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   before_action :correct_user, only:[:edit,:update,:destroy]
   # GET /projects or /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.includes(:user).all
   end
 
   # GET /projects/1 or /projects/1.json
