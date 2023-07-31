@@ -130,6 +130,7 @@ cs:
   tasks: "Úkoly"
 
   done: "Hotovo"
+  todo: "Není hotovo"
   title : "Titulek"
   description: "Popis"
 
