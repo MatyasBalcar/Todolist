@@ -3,5 +3,5 @@ class Project < ApplicationRecord
   validates :position, presence: true
   scope :for_user, ->(user) { where(user_id: user.id) }
   belongs_to :user
-  has_many :tasks
+  has_many :tasks, dependent: :destroy
 end
