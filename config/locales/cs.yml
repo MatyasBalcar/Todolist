@@ -138,6 +138,12 @@ cs:
   change : "Hotovo/ Není hotovo"
   edit_task : 'Upravit úkol'
 
+  chose_tasks: "Vybrat atribut úkolu"
+
+  show_all_tasks: "Všechny úkoly"
+  show_completed_tasks: "Hotové úkoly"
+  show_not_done_tasks: "Nehotové úkoly"
+
   state: "Stav úkolu"
   simple_form:
     "yes": 'Ano'

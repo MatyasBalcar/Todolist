@@ -1,7 +1,14 @@
 p style="color: green" = notice
 
+h3 =t(:chose_tasks)
+= form_tag tasks_path(@tasks), method: :get , remote: true do
+  div class="btn-group"
+    = button_tag t(:show_all_tasks), type: 'submit', name: 'tasks_to_show', value: 'all', class: "btn btn-outline-primary"
+    = button_tag t(:show_completed_tasks), type: 'submit', name: 'tasks_to_show', value: 'done', class: "btn btn-success"
+    = button_tag t(:show_not_done_tasks), type: 'submit', name: 'tasks_to_show', value: 'not_done', class: "btn btn-danger"
 
 
+- tasks_to_show = params[:tasks_to_show] || 'done'
 #tasks
   p
     h2 = t(:tasks)
@@ -13,8 +20,9 @@ p style="color: green" = notice
           th = t(:done)
           th = t(:state)
           th = t(:edit_task)
+          - filtered_tasks = render_filtered_tasks(@tasks, tasks_to_show)
+      - filtered_tasks.each do |task|
 
-      - @tasks.each do |task|
         -if task.user==current_user
 
           tbody

@@ -9,10 +9,13 @@
 
     = link_to t(:edit_project), edit_project_path(project),class:"btn btn-outline-dark"
 
+  - tasks_to_show = 'all'
 
-  -if !project.tasks.empty?
+  -if !project.tasks.empty? and tasks_to_show=='all'
     p
       h2 = t(:tasks)
+
+
     table class='table'
       thead
         tr

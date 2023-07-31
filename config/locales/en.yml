@@ -67,5 +67,11 @@ en:
   change: "Do or undo the task"
   edit_task: "Edit task"
 
+  chose_tasks : "Chose tasks"
+
+  show_all_tasks : "Show all tasks"
+  show_completed_tasks: "Show done tasks"
+  show_not_done_tasks : "Show not donw tasks"
+
   state: "State of the task"
 
