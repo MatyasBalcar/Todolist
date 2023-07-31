@@ -1,0 +1,14 @@
+= simple_form_for(@task) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .form-inputs
+    = f.input :title
+    = f.input :description
+    = f.input :is_done
+    = f.input :user_id
+    = f.input :project_id
+    = f.input :own_id
+
+  .form-actions
+    = f.button :submit
