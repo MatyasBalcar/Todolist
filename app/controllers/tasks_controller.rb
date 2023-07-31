@@ -57,7 +57,12 @@ class TasksController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  def toggle_done
+    @task = Task.find(params[:id])
+    @task.is_done = !@task.is_done
+    @task.save
+    redirect_back(fallback_location: root_path)
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task

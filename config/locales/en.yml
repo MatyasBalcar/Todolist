@@ -62,4 +62,6 @@ en:
   title: "Title"
   description: "Description"
   done: "Status"
+  done_task: "Task is done"
+  not_Done_task: "Task is yet to be done"
 

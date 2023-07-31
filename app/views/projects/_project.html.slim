@@ -18,13 +18,15 @@
         th =t(:title)
         th =t(:description)
         th =t(:done)
+        th button
+        th id
     - project.tasks.each do |task|
 
       tbody
         tr
           th =task.title
           th =task.description
-          th =task.is_done
+          th =done(task.is_done)
+          th = link_to"test", toggle_done_path(:id => task.id)
 
-
-
+          th =task.id
