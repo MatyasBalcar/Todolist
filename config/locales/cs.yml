@@ -134,6 +134,8 @@ cs:
   title : "Titulek"
   description: "Popis"
 
+  show_tasks: "Úkoly"
+
   done_task: "Úkol je hotový ✅"
   not_done_task : "Úkol není hotový ❌"
   change : "Hotovo/ Není hotovo"
