@@ -18,8 +18,8 @@
         th =t(:title)
         th =t(:description)
         th =t(:done)
-        th button
-        th id
+        th =t(:state)
+
     - project.tasks.each do |task|
 
       tbody
@@ -27,6 +27,4 @@
           th =task.title
           th =task.description
           th =done(task.is_done)
-          th = link_to"test", toggle_done_path(:id => task.id)
-
-          th =task.id
+          th = link_to t(:change), toggle_done_path(:id => task.id),class:"btn btn-outline-success"

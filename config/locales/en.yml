@@ -62,6 +62,9 @@ en:
   title: "Title"
   description: "Description"
   done: "Status"
-  done_task: "Task is done"
-  not_Done_task: "Task is yet to be done"
+  done_task: "Task is done ✅"
+  not_Done_task: "Task is yet to be done ❌"
+  change: "Do or undo the task"
+
+  state: "State of the task"
 

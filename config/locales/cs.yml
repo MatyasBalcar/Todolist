@@ -132,10 +132,12 @@ cs:
   done: "Hotovo"
   title : "Titulek"
   description: "Popis"
-  
-  done_task: "Úkol je hotový"
-  not_done_task : "Úkol není hotový"
 
+  done_task: "Úkol je hotový ✅"
+  not_done_task : "Úkol není hotový ❌"
+  change : "Hotovo/ Není hotovo"
+
+  state: "Stav úkolu"
   simple_form:
     "yes": 'Ano'
     "no": 'Ne'
