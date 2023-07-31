@@ -1,19 +1,19 @@
 = simple_form_for(@project) do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+  div style="margin-left: 20px"
+    .form-inputs
+      = f.input :title,
+              required: true
+      = f.input :position,
+              required: true
+      = f.input :user_id,
+              required: true,
+              :input_html => { value:current_user.id},
+              id: :project_user_id,
+              as: :hidden
 
-  .form-inputs
-    = f.input :title,
-            required: true
-    = f.input :position,
-            required: true
-    = f.input :user_id,
-            required: true,
-            :input_html => { value:current_user.id},
-            id: :project_user_id,
-            as: :hidden
 
-
-
-  .form-actions
-    = f.button :submit, class:'bn btn-success'
+  div style="margin-left: 20px"
+    .form-actions
+      = f.button :submit, class:'btn btn-success'

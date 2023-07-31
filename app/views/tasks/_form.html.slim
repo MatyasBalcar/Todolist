@@ -1,17 +1,17 @@
 = simple_form_for(@task) do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-
-  .form-inputs
-    = f.input :title
-    = f.input :description
-    = f.input :is_done
-    = f.input :user_id,
-            :input_html => { value:current_user.id},
-            as: :hidden
-    = f.input :project_id,
-            :input_html => { value:params[:project_id]},
-            as: :hidden
-
-  .form-actions
-    = f.button :submit, class:"btn btn-success"
+  div style="margin-left: 20px"
+    .form-inputs
+      = f.input :title
+      = f.input :description
+      = f.input :is_done
+      = f.input :user_id,
+              :input_html => { value:current_user.id},
+              as: :hidden
+      = f.input :project_id,
+              :input_html => { value:params[:project_id]},
+              as: :hidden
+  div style="margin-left: 20px"
+    .form-actions
+      = f.button :submit, class:"btn btn-success"
