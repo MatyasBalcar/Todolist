@@ -1,12 +1,27 @@
 p style="color: green" = notice
 
-h1 Tasks
+
 
 #tasks
-  - @tasks.each do |task|
-    == render task
-    p
-      -if task.user==current_user
-        = link_to "Show this task", task
+  p
+    h2 = t(:tasks)
+    table class='table'
+      thead
+        tr
+          th = t(:title)
+          th = t(:description)
+          th = t(:done)
+          th = t(:state)
+
+      - @tasks.each do |task|
+        -if task.user==current_user
+
+          tbody
+            tr
+              th = task.title
+              th = task.description
+              th = done(task.is_done)
+              th = link_to t(:change), toggle_done_path(:id => task.id), class: "btn btn-outline-success"
+
 
 

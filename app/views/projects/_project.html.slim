@@ -9,22 +9,23 @@
 
     = link_to t(:edit_project), edit_project_path(project),class:"btn btn-outline-dark"
 
+
+  -if !project.tasks.empty?
     p
-      h2 =t(:tasks)
-
-  table class='table'
-    thead
-      tr
-        th =t(:title)
-        th =t(:description)
-        th =t(:done)
-        th =t(:state)
-
-    - project.tasks.each do |task|
-
-      tbody
+      h2 = t(:tasks)
+    table class='table'
+      thead
         tr
-          th =task.title
-          th =task.description
-          th =done(task.is_done)
-          th = link_to t(:change), toggle_done_path(:id => task.id),class:"btn btn-outline-success"
+          th =t(:title)
+          th =t(:description)
+          th =t(:done)
+          th =t(:state)
+
+      - project.tasks.each do |task|
+
+        tbody
+          tr
+            th =task.title
+            th =task.description
+            th =done(task.is_done)
+            th = link_to t(:change), toggle_done_path(:id => task.id),class:"btn btn-outline-success"
