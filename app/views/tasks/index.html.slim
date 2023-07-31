@@ -12,6 +12,7 @@ p style="color: green" = notice
           th = t(:description)
           th = t(:done)
           th = t(:state)
+          th = t(:edit_task)
 
       - @tasks.each do |task|
         -if task.user==current_user
@@ -22,6 +23,6 @@ p style="color: green" = notice
               th = task.description
               th = done(task.is_done)
               th = link_to t(:change), toggle_done_path(:id => task.id), class: "btn btn-outline-success"
-
+              th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
 
 

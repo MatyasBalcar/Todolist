@@ -65,6 +65,7 @@ en:
   done_task: "Task is done ✅"
   not_Done_task: "Task is yet to be done ❌"
   change: "Do or undo the task"
+  edit_task: "Edit task"
 
   state: "State of the task"
 

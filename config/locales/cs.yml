@@ -136,6 +136,7 @@ cs:
   done_task: "Úkol je hotový ✅"
   not_done_task : "Úkol není hotový ❌"
   change : "Hotovo/ Není hotovo"
+  edit_task : 'Upravit úkol'
 
   state: "Stav úkolu"
   simple_form:
