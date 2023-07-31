@@ -122,7 +122,11 @@ cs:
   projects: "Projekty"
   show_project: "Ukaž tento projekt"
   show_projects: "Všechny projekty"
+  edit_project: "Upravit projekt"
+  back_to_project: "Zpátky do menu projektů"
+  destroy_this_project: "Smazat tento projekt"
 
+  new_task: "Nový úkol"
   simple_form:
     "yes": 'Ano'
     "no": 'Ne'

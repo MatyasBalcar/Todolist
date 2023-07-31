@@ -4,8 +4,10 @@ h1 =t(:projects)
 
 #projects
   - @projects.each do |project|
+    -if project.user==current_user
+      == render project
+      = link_to t(:show_project), project
 
-    == render project
 
 
 

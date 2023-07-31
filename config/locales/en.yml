@@ -52,3 +52,9 @@ en:
   projects: "Project"
   show_project: "Show this project"
   show_projects: "All projects"
+  edit_projects: "Edit projects"
+  back_to_projects: "Back to projects"
+  destroy_this_project: "Destroy this project"
+
+  new_task: "New task"
+
