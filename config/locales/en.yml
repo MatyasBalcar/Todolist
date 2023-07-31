@@ -74,5 +74,9 @@ en:
   show_completed_tasks: "Show done tasks"
   show_not_done_tasks : "Show not donw tasks"
 
+  nav_message: "Signed in as %{user} with %{project} projects."
+
+  app_name: "Todo app"
+
   state: "State of the task"
 

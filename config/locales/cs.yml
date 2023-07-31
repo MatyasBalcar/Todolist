@@ -146,6 +146,9 @@ cs:
   show_all_tasks: "Všechny úkoly"
   show_completed_tasks: "Hotové úkoly"
   show_not_done_tasks: "Nehotové úkoly"
+  nav_message: "Přihlášen jako %{user} s %{project} projekty."
+
+  app_name: "Todo aplikace"
 
   state: "Stav úkolu"
   simple_form:
