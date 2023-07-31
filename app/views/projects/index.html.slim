@@ -1,13 +1,14 @@
 p style="color: green" = notice
 
 h1 =t(:projects)
-
+== pagy_nav(@pagy)
 #projects
-  - @projects.each do |project|
-    -if project.user==current_user
-      == render project
-      = link_to t(:show_project), project
+= turbo_frame_tag :projects do
+  ==render @projects
 
+= turbo_frame_tag :pagination,
+        loading: :lazy,
+        src: projects_path(format: :turbo_stream)
 
 
 

@@ -4,7 +4,12 @@ class ProjectsController < ApplicationController
   before_action :correct_user, only:[:edit,:update,:destroy]
   # GET /projects or /projects.json
   def index
-    @projects = Project.includes(:user).all
+
+    @pagy, @projects= pagy_countless(Project.for_user(current_user), items:1)
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
   end
 
   # GET /projects/1 or /projects/1.json
