@@ -6,9 +6,10 @@
     = f.input :title
     = f.input :description
     = f.input :is_done
-    = f.input :user_id
-    = f.input :project_id
-    = f.input :own_id
+    = f.input :user_id,
+            :input_html => { value:current_user.id}
+    = f.input :project_id,
+            :input_html => { value:params[:project_id]}
 
   .form-actions
     = f.button :submit

@@ -3,4 +3,5 @@ class Project < ApplicationRecord
   validates :position, presence: true
 
   belongs_to :user
+  has_many :tasks
 end

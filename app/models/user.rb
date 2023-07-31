@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :surname, presence: true
 
   has_many :projects
+  has_many :tasks
 end
