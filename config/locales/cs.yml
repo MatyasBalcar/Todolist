@@ -128,6 +128,11 @@ cs:
 
   new_task: "Nový úkol"
   tasks: "Úkoly"
+
+  done: "Hotovo"
+  title : "Titulek"
+  description: "Popis"
+
   simple_form:
     "yes": 'Ano'
     "no": 'Ne'

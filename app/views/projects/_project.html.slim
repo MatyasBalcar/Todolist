@@ -6,9 +6,25 @@
     p
       strong Position:
       =< project.position
+
+    = link_to t(:edit_project), edit_project_path(project),class:"btn btn-outline-dark"
+
     p
       h2 =t(:tasks)
-      ==render project.tasks
-  = link_to t(:edit_project), edit_project_path(project),class:"btn btn-outline-dark"
+
+  table class='table'
+    thead
+      tr
+        th =t(:title)
+        th =t(:description)
+        th =t(:done)
+    - project.tasks.each do |task|
+
+      tbody
+        tr
+          th =task.title
+          th =task.description
+          th =task.is_done
+
 
 
