@@ -127,6 +127,7 @@ cs:
   destroy_this_project: "Smazat tento projekt"
 
   new_task: "Nový úkol"
+  tasks: "Úkoly"
   simple_form:
     "yes": 'Ano'
     "no": 'Ne'

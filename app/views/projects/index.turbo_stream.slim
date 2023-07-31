@@ -1,6 +1,7 @@
 =turbo_stream.append :projects  do
 
   ==render @projects
+
 =turbo_stream.replace :pagination do
   -if @pagy.next.present?
     =turbo_frame_tag :pagination,

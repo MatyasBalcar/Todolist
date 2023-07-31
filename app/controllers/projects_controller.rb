@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects or /projects.json
   def index
 
-    @pagy, @projects= pagy_countless(Project.for_user(current_user), items:1)
+    @pagy, @projects= pagy_countless(Project.for_user(current_user).includes(:tasks), items:1)
     respond_to do |format|
       format.html
       format.turbo_stream
