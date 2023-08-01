@@ -14,9 +14,6 @@ class TagsTest < ApplicationSystemTestCase
     visit tags_url
     click_on "New tag"
 
-    fill_in "Own", with: @tag.own_id
-    fill_in "Project", with: @tag.project_id
-    fill_in "Task", with: @tag.task_id
     fill_in "Title", with: @tag.title
     fill_in "User", with: @tag.user_id
     click_on "Create Tag"
@@ -29,9 +26,6 @@ class TagsTest < ApplicationSystemTestCase
     visit tag_url(@tag)
     click_on "Edit this tag", match: :first
 
-    fill_in "Own", with: @tag.own_id
-    fill_in "Project", with: @tag.project_id
-    fill_in "Task", with: @tag.task_id
     fill_in "Title", with: @tag.title
     fill_in "User", with: @tag.user_id
     click_on "Update Tag"

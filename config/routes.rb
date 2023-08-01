@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :tags
+  resources :stiteks
+
   resources :tasks
   resources :projects
   devise_for :users

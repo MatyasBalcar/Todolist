@@ -4,10 +4,8 @@
 
   .form-inputs
     = f.input :title
-    = f.input :own_id
-    = f.input :project_id
-    = f.input :user_id
-    = f.input :task_id
+    = f.input :user_id,
+            :input_html => { value:current_user.id}
 
   .form-actions
     = f.button :submit

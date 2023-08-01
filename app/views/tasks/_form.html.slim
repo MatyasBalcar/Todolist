@@ -1,4 +1,4 @@
-= simple_form_for(@task) do |f|
+= simple_form_for @task ,html: { multipart: true } do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
   div style="margin-left: 20px"
@@ -11,8 +11,9 @@
               as: :hidden
       -if params[:project_id] != nil
         = f.input :project_id,
-                  :input_html => { value:params[:project_id]},
-                as: :hidden
+                  :input_html => { value:params[:project_id]}
+      =f.association :tags,collection:Tag.for_user(current_user), as: :check_boxes,item_wrapper_class: 'checkbox_container',label: t(:tags)
+
   div style="margin-left: 20px"
     .form-actions
       = f.button :submit, class:"btn btn-success"

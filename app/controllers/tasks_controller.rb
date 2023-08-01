@@ -12,6 +12,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
+
     @task = Task.new
 
   end
@@ -22,6 +23,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
+    100.times do puts @task end
     @task = Task.new(task_params)
 
     respond_to do |format|
@@ -71,6 +73,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:title, :description, :is_done, :user_id, :project_id, :own_id)
+      params.require(:task).permit(:title, :description, :is_done, :user_id, :project_id, :own_id,tag_ids: [])
     end
 end
