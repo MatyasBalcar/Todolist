@@ -13,11 +13,11 @@ div class='container'
           td
             - if combined_result.is_a?(Project)
               p Project
-              = link_to combined_result.title, combined_result
+              =link_to render_highlighted_title(combined_result.title, @query.title_cont)
 
             - elsif combined_result.is_a?(Task)
               p Task
-              = link_to combined_result.title, combined_result
+              =link_to render_highlighted_title(combined_result.title, @query.title_cont)
             - elsif combined_result.is_a?(Tag)
               p Tag
-              = link_to combined_result.title, combined_result
+              =link_to render_highlighted_title(combined_result.title, @query.title_cont)

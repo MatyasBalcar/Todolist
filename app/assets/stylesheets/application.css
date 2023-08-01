@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+.highlighted {
+    color: red; /* Customize the highlight color as needed */
+}
