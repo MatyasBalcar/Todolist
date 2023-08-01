@@ -9,9 +9,10 @@
       = f.input :user_id,
               :input_html => { value:current_user.id},
               as: :hidden
-      = f.input :project_id,
-              :input_html => { value:params[:project_id]},
-              as: :hidden
+      -if params[:project_id] != nil
+        = f.input :project_id,
+                  :input_html => { value:params[:project_id]},
+                as: :hidden
   div style="margin-left: 20px"
     .form-actions
       = f.button :submit, class:"btn btn-success"
