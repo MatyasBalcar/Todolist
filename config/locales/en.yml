@@ -68,6 +68,9 @@ en:
   change: "Do or undo the task"
   edit_task: "Edit task"
 
+  edit_tags: "Edit tags"
+  edit_tag: "Edit this tag"
+  new_tag : "New tag"
   chose_tasks : "Chose tasks"
 
   show_all_tasks : "Show all tasks"

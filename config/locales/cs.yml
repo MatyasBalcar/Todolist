@@ -148,6 +148,11 @@ cs:
   show_not_done_tasks: "Nedodělané úkoly"
   nav_message: "Přihlášen jako %{user} s %{project} projekty."
 
+  edit_tags: "Upravit štítky"
+  edit_tag: "Upravit tento štítek"
+  new_tag: "Nový štítek"
+  tags: "Štítky"
+
   app_name: "Todo aplikace"
 
   state: "Stav úkolu"

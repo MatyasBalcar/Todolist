@@ -1,11 +1,18 @@
 p style="color: green" = notice
 
-h1 Tags
 
-#tags
-  - @tags.each do |tag|
-    == render tag
-    p
-      = link_to "Show this tag", tag
 
-= link_to "New tag", new_tag_path
+h2 = t(:tags)
+table class='table'
+  thead class="thead-dark"
+    tr
+      th = t(:title)
+      th = t(:edit_tags)
+
+  tbody
+    - @tags.each do |tag|
+      tr
+        th = tag.title
+        th = link_to t(:edit_tag), tag, class:"btn btn-outline-success"
+
+= link_to t(:new_tag), new_tag_path, class:"btn btn-outline-dark"

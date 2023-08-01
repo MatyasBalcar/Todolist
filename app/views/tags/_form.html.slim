@@ -5,7 +5,7 @@
   .form-inputs
     = f.input :title
     = f.input :user_id,
-            :input_html => { value:current_user.id}
-
+            :input_html => { value:current_user.id},
+            as: :hidden
   .form-actions
     = f.button :submit
