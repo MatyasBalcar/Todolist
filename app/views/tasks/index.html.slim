@@ -25,7 +25,7 @@ h3 =t(:chose_tasks)
         tr
           th = t(:title)
           th = t(:description)
-          th = t(:number_of_tags)
+          th = t(:tasks)
           th = t(:done)
           th = t(:state)
 
@@ -39,7 +39,9 @@ h3 =t(:chose_tasks)
             tr
               th = task.title
               th = task.description
-              th =task.tags.size
+              th
+                =  task.tags.map(&:title).join(', ')
+
               th = done(task.is_done)
               th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
 

@@ -73,6 +73,8 @@ en:
   new_tag : "New tag"
   chose_tasks : "Chose tasks"
 
+  result: "Results"
+
   show_all_tasks : "Show all tasks"
   show_completed_tasks: "Show done tasks"
   show_not_done_tasks : "Show not donw tasks"

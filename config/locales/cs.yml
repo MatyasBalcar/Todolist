@@ -153,6 +153,8 @@ cs:
   new_tag: "Nový štítek"
   tags: "Štítky"
 
+  result: "Výsledek/ků"
+
   app_name: "Todo aplikace"
 
   state: "Stav úkolu"
