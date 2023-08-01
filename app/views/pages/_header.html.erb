@@ -37,7 +37,9 @@
             <a class="nav-link" href="#" style="color:white"><b><%=t(:nav_message, user:current_user.name, project:current_user.projects.size) %></b></a>
 
         </li>
-
+        <li ">
+          <%=render 'search/form' %>
+        </li>
         <%else %>
         <li class="nav-item ">
           <a class="nav-link" href="#"><%=link_to t(:signup), new_user_registration_path, class:"btn btn-outline-success" %> <span class="sr-only"></span></a>
