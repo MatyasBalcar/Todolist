@@ -25,7 +25,8 @@ h3 =t(:chose_tasks)
         tr
           th = t(:title)
           th = t(:description)
-          th = t(:tasks)
+          th = t(:tags)
+          th = t(:project)
           th = t(:done)
           th = t(:state)
 
@@ -38,10 +39,19 @@ h3 =t(:chose_tasks)
           tbody
             tr
               th = task.title
-              th = task.description
               th
-                =  task.tags.map(&:title).join(', ')
-
+                -if !task.description.blank?
+                  =task.description
+                -else
+                  p
+                    i =t(:no_description)
+              th
+                -if !task.tags.blank?
+                  = task.tags.map(&:title).join(', ')
+                -else
+                  p
+                    i = t(:no_tags)
+              th = task.project.title
               th = done(task.is_done)
               th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
 
