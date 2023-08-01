@@ -10,9 +10,9 @@
 
     = link_to t(:edit_project), edit_project_path(project),class:"btn btn-outline-dark"
 
-  - tasks_to_show = 'all'
 
-  -if !project.tasks.empty? and tasks_to_show=='all'
+
+  -if !project.tasks.empty?
     p
       h2 = t(:tasks)
 
@@ -26,6 +26,7 @@
           th =t(:done)
           th =t(:state)
           th =t(:edit_task)
+
       - project.tasks.each do |task|
 
         tbody
@@ -36,4 +37,6 @@
             th =done(task.is_done)
             th =link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
 
-            th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
+            th
+              = link_to t(:edit_task),edit_task_path(task), class:"btn btn-outline-dark"
+
