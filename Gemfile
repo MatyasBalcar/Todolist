@@ -5,7 +5,7 @@ ruby "3.2.2"
 gem 'simple_form'
 gem 'pagy', '~> 6.0' # omit patch digit
 gem "slim-rails"
-gem 'bullet', group: 'development'
+gem 'bullet'
 gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
@@ -79,3 +79,4 @@ gem "devise", "~> 4.9"
 
 gem "ransack", "~> 4.0"
 gem 'rspec-rails'
+gem 'factory_bot_rails'
