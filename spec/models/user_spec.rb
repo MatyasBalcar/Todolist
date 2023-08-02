@@ -11,6 +11,8 @@ RSpec.describe User, type: :model do
 
     expect { user.destroy }.to change { Tag.count }.by(-1)
   end
+
+
   context "validations" do
     it "validates the presence of email" do
       user = FactoryBot.build(:user, email: nil) # Set email to nil explicitly
