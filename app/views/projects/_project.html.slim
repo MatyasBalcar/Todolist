@@ -26,6 +26,7 @@
           th =t(:done)
           th =t(:state)
           th =t(:edit_task)
+          th =t(:file)
 
       - project.tasks.each do |task|
 
@@ -39,4 +40,4 @@
 
             th
               = link_to t(:edit_task),edit_task_path(task), class:"btn btn-outline-dark"
-
+            th =link_to t(:view_file), task.file

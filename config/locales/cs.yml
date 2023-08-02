@@ -155,6 +155,9 @@ cs:
 
   result: "Výsledek/ků"
 
+  file: "Soubor"
+  view_file: 'Zobrazit/stáhnout soubor'
+
   no_description: "Nebyl zadán žádný popisek"
   no_tags: "Nebyl přidán žádný štítek"
 
