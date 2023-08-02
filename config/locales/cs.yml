@@ -157,6 +157,7 @@ cs:
 
   file: "Soubor"
   view_file: 'Zobrazit/stáhnout soubor'
+  no_file: "Nebyl nahrán žádný soubor"
 
   no_description: "Nebyl zadán žádný popisek"
   no_tags: "Nebyl přidán žádný štítek"

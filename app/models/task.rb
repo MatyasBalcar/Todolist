@@ -9,6 +9,8 @@ class Task < ApplicationRecord
 
   validates :title, presence:true
 
+  scope :for_user, ->(user) { where(user_id: user.id) }
+
   def self.ransackable_attributes(auth_object = nil)
     [ "title"]
   end

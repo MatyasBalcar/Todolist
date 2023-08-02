@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all.includes([:user,:tags, :project])
+    @tasks = Task.all.includes(%i[file_attachment tags project])
   end
 
   # GET /tasks/1 or /tasks/1.json
@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    100.times do puts @task end
+
     @task = Task.new(task_params)
 
     respond_to do |format|

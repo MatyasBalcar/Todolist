@@ -31,6 +31,7 @@ h3 =t(:chose_tasks)
           th = t(:state)
 
           th = t(:edit_task)
+          th =t(:file)
           - filtered_tasks = render_filtered_tasks(@tasks, tasks_to_show)
       - filtered_tasks.each do |task|
 
@@ -39,22 +40,13 @@ h3 =t(:chose_tasks)
           tbody
             tr
               th = task.title
-              th
-                -if !task.description.blank?
-                  =task.description
-                -else
-                  p
-                    i =t(:no_description)
-              th
-                -if !task.tags.blank?
-                  = task.tags.map(&:title).join(', ')
-                -else
-                  p
-                    i = t(:no_tags)
+              th=has_description(task)
+              th=has_tags(task)
               th = task.project.title
               th = done(task.is_done)
               th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
 
               th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
+              th =has_file(task)
 
 
