@@ -9,7 +9,7 @@
       =< project.position
 
     = link_to t(:edit_project), edit_project_path(project),class:"btn btn-outline-dark"
-
+    =link_to t(:new_task),new_task_path(:project_id => project.id),class:"btn btn-outline-success"
 
 
   -if !project.tasks.empty?
@@ -41,3 +41,4 @@
             th
               = link_to t(:edit_task),edit_task_path(task), class:"btn btn-outline-dark"
             th =has_file(task)
+

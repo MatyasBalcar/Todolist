@@ -11,7 +11,8 @@
               as: :hidden
       -if params[:project_id] != nil
         = f.input :project_id,
-                  :input_html => { value:params[:project_id]}
+                  :input_html => { value:params[:project_id]},
+                as: :hidden
       =f.association :tags,collection:Tag.for_user(current_user), as: :check_boxes,item_wrapper_class: 'checkbox_container',label: t(:tags)
       =f.input :file, as: :file
 

@@ -139,7 +139,7 @@ cs:
   done_task: "Úkol je hotový ✅"
   not_done_task : "Úkol není hotový ❌"
   change : "Hotovo/ Není hotovo"
-  edit_task : 'Upravit úkol'
+  edit_task : 'Upravit nebo vytvořit úkol'
 
   chose_tasks: "Vybrat atribut úkolu"
 

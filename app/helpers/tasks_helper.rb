@@ -16,7 +16,5 @@ module TasksHelper
   def has_description(task)
     i=task.description.blank? ? t(:no_description) : task.description
   end
-  def has_tags(task)
-    i=!task.tags.blank? ? t(:no_tags) : task.tags.map(&:title).join(', ')
-    end
+
 end
