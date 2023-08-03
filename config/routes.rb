@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'search', to:"search#index"
   resources :tags
-  resources :stiteks
+
+  resources :tasks, only: [:edit, :update, :destroy]
 
   resources :tasks
   resources :projects

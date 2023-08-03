@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all.includes(%i[file_attachment tags project user])
+    @tasks = Task.all
   end
 
   # GET /tasks/1 or /tasks/1.json
