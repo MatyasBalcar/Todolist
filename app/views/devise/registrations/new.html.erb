@@ -6,21 +6,27 @@
   <div class="form-inputs">
     <%= f.input :name,
                 required: true,
-                autofocus: true
+                autofocus: true,
+                label: t(:name)
               %>
     <%= f.input :surname,
                 required: true,
-                autofocus: true
+                autofocus: true,
+                label: t(:surname)
     %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+                label: t(:email),
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
+                label: t(:password),
                 hint: (t(:password_minimum, length:"6") ),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+
+                label: t(:confirm_password),
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
   </div>

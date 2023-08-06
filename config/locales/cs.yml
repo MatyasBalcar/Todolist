@@ -40,7 +40,7 @@ cs:
   update: "Změnit"
   back : "Zpátky"
 
-  password_minimum: "Minimálně %{length} charakterů."
+  password_minimum: "Minimálně %{length} znaků."
   welcome: "Vítejte v aplikaci na správu projektů a jejich úkolů a tagů."
   leave_blank_password: "Toto pole ponechejte prázdné, pokud nechcete heslo změnit."
   password_needed: "Potřebujeme vaše stávající heslo, abychom ho mohli změnit."
@@ -100,4 +100,8 @@ cs:
 
   back_to_tags: "Zpátky na štítky"
 
+  name: "Jméno"
+  surname: "Příjmení"
+  password: "Heslo"
+  confirm_password: "Potvrdit heslo"
 
