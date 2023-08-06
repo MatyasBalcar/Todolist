@@ -3,7 +3,7 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .form-inputs
-    = f.input :title
+    = f.input :title, label: t(:title)
     = f.input :user_id,
             :input_html => { value:current_user.id},
             as: :hidden

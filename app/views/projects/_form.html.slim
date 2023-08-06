@@ -3,9 +3,9 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
   div style="margin-left: 20px"
     .form-inputs
-      = f.input :title,
+      = f.input :title, label: t(:title),
               required: true
-      = f.input :position,
+      = f.input :position,label: t(:position),
               required: true
       = f.input :user_id,
               required: true,

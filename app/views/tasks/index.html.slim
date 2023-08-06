@@ -36,18 +36,18 @@ h3 =t(:chose_tasks)
           - filtered_tasks = render_filtered_tasks(@tasks, tasks_to_show)
       - filtered_tasks.each do |task|
 
-        -if task.user==current_user
 
-          tbody
-            tr
-              th = task.title
-              th=has_description(task)
-              th=task.tags.map(&:title).join(', ')
-              th = task.project.title
-              th = done(task.is_done)
-              th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
-              th = button_to t(:delete_task), task_path(task), method: :delete, :data => {:confirm => 'Are you sure?'}, class: "btn btn-outline-danger"
-              th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
-              th =has_file(task)
+
+        tbody
+          tr
+            th = task.title
+            th=has_description(task)
+            th=task.tags.map(&:title).join(', ')
+            th = task.project.title
+            th = done(task.is_done)
+            th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
+            th = button_to t(:delete_task), task_path(task), method: :delete, :data => {:confirm => 'Are you sure?'}, class: "btn btn-outline-danger"
+            th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
+            th =has_file(task)
 
 

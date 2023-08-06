@@ -3,9 +3,9 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
   div style="margin-left: 20px"
     .form-inputs
-      = f.input :title
-      = f.input :description
-      = f.input :is_done
+      = f.input :title, label: t(:title)
+      = f.input :description, label: t(:description)
+      = f.input :is_done, label: t(:is_done)
       = f.input :user_id,
               :input_html => { value:current_user.id},
               as: :hidden
@@ -14,7 +14,7 @@
                   :input_html => { value:params[:project_id]},
                 as: :hidden
       =f.association :tags,collection:Tag.for_user(current_user), as: :check_boxes,item_wrapper_class: 'checkbox_container',label: t(:tags)
-      =f.input :file, as: :file
+      =f.input :file, as: :file, label: t(:file)
 
   div style="margin-left: 20px"
     .form-actions
