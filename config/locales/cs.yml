@@ -116,3 +116,5 @@ cs:
   search: "Vyhledat"
 
   back_to_projects: "Zpět na projekty"
+
+  no_projects: "Nemáte žádné projekty"
