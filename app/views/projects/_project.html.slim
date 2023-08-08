@@ -1,12 +1,11 @@
 
   div id="#{dom_id project}"
+
+    h3
+      =< project.title
     p
-      h3 Title:
-      b
-        =< project.title
-    p
-      strong Position:
-      =< project.position
+      h5 =t(:position) +" :"+ project.position.to_s
+
 
     = link_to t(:edit_project), edit_project_path(project),class:"btn btn-outline-dark"
     =link_to t(:new_task),new_task_path(:project_id => project.id),class:"btn btn-outline-success"
