@@ -71,6 +71,7 @@ cs:
   change : "Hotovo/ Není hotovo"
   edit_task : 'Upravit úkol'
   back_to_tasks: "Zpět do úkolů"
+  delete_task: "Smazat úkol"
 
   chose_tasks: "Vybrat atribut úkolu"
 
