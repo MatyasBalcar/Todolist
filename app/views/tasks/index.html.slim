@@ -47,7 +47,7 @@ p style="color: green" = notice
             th = task.project.title
             th = done(task.is_done)
             th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
-            th = button_to t(:delete_task), task_path(task), method: :delete, :data => {:confirm => 'Are you sure?'}, class: "btn btn-outline-danger"
+            th = button_to t(:delete_task), task_path(task), method: :delete, :alert => "You haz errors!", class: "btn btn-outline-danger"
             th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
             th =has_file(task)
 -else
