@@ -13,7 +13,10 @@
         = f.input :project_id,
                   :input_html => { value:params[:project_id]},
                 as: :hidden
-      =f.association :tags,collection:Tag.for_user(current_user), as: :check_boxes,item_wrapper_class: 'checkbox_container',label: t(:tags)
+      -if !Tag.for_user(current_user).blank?
+        =f.association :tags,collection:Tag.for_user(current_user), as: :check_boxes,item_wrapper_class: 'checkbox_container',label: t(:tags)
+      -else
+        =t(:no_tags)
       =f.input :file, as: :file, label: t(:file)
 
   div style="margin-left: 20px"
