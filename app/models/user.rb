@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :surname, presence: true
 
+
   has_many :projects, dependent: :destroy
   has_many :tasks , dependent: :destroy
   has_many :tags, dependent: :destroy

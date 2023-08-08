@@ -79,6 +79,7 @@ cs:
   nav_message: "Přihlášen jako %{user} s %{project} projekty."
 
   edit_tags: "Upravit štítky"
+  tag_action: "Možnosti"
   edit_tag: "Upravit tento štítek"
   new_tag: "Nový štítek"
   tags: "Štítky"
@@ -104,4 +105,9 @@ cs:
   surname: "Příjmení"
   password: "Heslo"
   confirm_password: "Potvrdit heslo"
+
+  remember_me: "Zůstat přihlášen"
+  forgot_password: "Zapomenuté heslo?"
+
+  search: "Vyhledat"
 
