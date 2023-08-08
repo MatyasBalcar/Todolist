@@ -16,7 +16,11 @@
       -if !Tag.for_user(current_user).blank?
         =f.association :tags,collection:Tag.for_user(current_user), as: :check_boxes,item_wrapper_class: 'checkbox_container',label: t(:tags)
       -else
-        =t(:no_tags)
+        b
+          =t(:no_tags)
+        br
+        = link_to t(:user_ads_new_tag), new_tag_path, class: "btn btn-outline-dark"
+
       =f.input :file, as: :file, label: t(:file)
 
   div style="margin-left: 20px"
