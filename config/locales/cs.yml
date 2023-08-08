@@ -75,7 +75,7 @@ cs:
   edit_task : 'Upravit úkol'
   back_to_tasks: "Zpět do úkolů"
   delete_task: "Smazat úkol"
-
+  delete_project: "Smazat projekt"
   chose_tasks: "Vybrat atribut úkolu"
 
   show_all_tasks: "Všechny úkoly"
@@ -98,6 +98,10 @@ cs:
   no_description: "Nebyl zadán žádný popisek"
   no_tags: "Nebyl přidán žádný štítek"
   no_tasks: 'Nemáte žádné úkoly, vytvořte je v projektu. '
+  no_projects: "Nemáte žádné projekty"
+  no_user_projects: "Nemáte žádné projekty, můžete je vytvořit zde: "
+
+  no_tasks_for_project: "Nemáte žádné úkoly pro tento projekt"
 
   app_name: "Todo aplikace"
 
@@ -121,9 +125,5 @@ cs:
 
   back_to_projects: "Zpět na projekty"
 
-  no_projects: "Nemáte žádné projekty"
-  no_user_projects: "Nemáte žádné projekty, můžete je vytvořit zde: "
-
-  no_tasks_for_project: "Nemáte žádné úkoly pro tento projekt"
 
 
