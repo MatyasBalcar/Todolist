@@ -125,5 +125,9 @@ cs:
 
   back_to_projects: "Zpět na projekty"
 
+  destroy_tag: "Smazat štítek"
+  destroy_task: "Smazat úkol"
+
+
 
 
