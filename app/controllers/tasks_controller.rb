@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.includes([:file_attachment]).for_user(current_user)
+    @tasks = Task.includes([:file_attachment, :tags, :project]).for_user(current_user)
   end
 
   # GET /tasks/1 or /tasks/1.json
