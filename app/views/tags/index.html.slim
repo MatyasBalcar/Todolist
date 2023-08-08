@@ -19,3 +19,5 @@ h2 = t(:tags)
   = link_to t(:new_tag), new_tag_path, class:"btn btn-outline-dark"
 -else
   =t(:no_tags)
+  br
+  =link_to t(:user_ads_new_tag), new_tag_path, class:"btn btn-outline-dark"

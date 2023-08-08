@@ -101,6 +101,7 @@ cs:
   position: "Pořadí"
 
   back_to_tags: "Zpátky na štítky"
+  user_ads_new_tag: "Štítek můžete vytvořit zde"
 
   name: "Jméno"
   surname: "Příjmení"
