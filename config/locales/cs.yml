@@ -30,6 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 cs:
+  pagy:
+    prev: "Předcházející"
+    next: "Další"
   hello: "Hello world"
   home: "Domů"
   success: "Výborně"
@@ -119,3 +122,5 @@ cs:
 
   no_projects: "Nemáte žádné projekty"
   no_user_projects: "Nemáte žádné projekty, můžete je vytvořit zde: "
+
+

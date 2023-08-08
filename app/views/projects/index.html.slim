@@ -3,10 +3,13 @@ p style="color: green" = notice
 
 -if !@projects.blank?
   h1 =t(:projects)
-  == pagy_nav(@pagy)
+  == pagy_nav(@pagy, prev: t(:prev, scope: 'pagy'), next: t(:next, scope: 'pagy'))
+
+
   #projects
   = turbo_frame_tag :projects do
     ==render @projects
+
 
 
   = turbo_frame_tag :pagination,
