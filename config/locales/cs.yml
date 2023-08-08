@@ -97,6 +97,7 @@ cs:
 
   no_description: "Nebyl zadán žádný popisek"
   no_tags: "Nebyl přidán žádný štítek"
+  no_tasks: 'Nemáte žádné úkoly, vytvořte je v projektu. '
 
   app_name: "Todo aplikace"
 

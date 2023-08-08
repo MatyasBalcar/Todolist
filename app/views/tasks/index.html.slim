@@ -1,25 +1,26 @@
 p style="color: green" = notice
 
-h3 =t(:chose_tasks)
 
--default_option = 'all'
--selected_task = params[:tasks_to_show] || default_option
+-if !@tasks.blank?
+  h3 = t(:chose_tasks)
 
-= form_tag tasks_path(@tasks), method: :get , remote: true do
-  div.btn-group
-    = button_tag t(:show_all_tasks), type: 'submit', name: 'tasks_to_show', value: 'all',
-            class: "btn #{selected_task == 'all' ? 'btn-primary' : 'btn-outline-primary'}"
+  - default_option = 'all'
+  - selected_task = params[:tasks_to_show] || default_option
+  = form_tag tasks_path(@tasks), method: :get , remote: true do
+    div.btn-group
+      = button_tag t(:show_all_tasks), type: 'submit', name: 'tasks_to_show', value: 'all',
+              class: "btn #{selected_task == 'all' ? 'btn-primary' : 'btn-outline-primary'}"
 
-    = button_tag t(:show_completed_tasks), type: 'submit', name: 'tasks_to_show', value: 'done',
-            class: "btn #{selected_task == 'done' ? 'btn-success' : 'btn-outline-success'}"
+      = button_tag t(:show_completed_tasks), type: 'submit', name: 'tasks_to_show', value: 'done',
+              class: "btn #{selected_task == 'done' ? 'btn-success' : 'btn-outline-success'}"
 
-    = button_tag t(:show_not_done_tasks), type: 'submit', name: 'tasks_to_show', value: 'not_done',
-            class: "btn #{selected_task == 'not_done' ? 'btn-danger' : 'btn-outline-danger'}"
+      = button_tag t(:show_not_done_tasks), type: 'submit', name: 'tasks_to_show', value: 'not_done',
+              class: "btn #{selected_task == 'not_done' ? 'btn-danger' : 'btn-outline-danger'}"
 
 
-- tasks_to_show = params[:tasks_to_show] || default_option
-#tasks
-  p
+  - tasks_to_show = params[:tasks_to_show] || default_option
+
+
     h2 = t(:tasks)
     table class='table'
       thead class="thead-dark"
@@ -49,5 +50,6 @@ h3 =t(:chose_tasks)
             th = button_to t(:delete_task), task_path(task), method: :delete, :data => {:confirm => 'Are you sure?'}, class: "btn btn-outline-danger"
             th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
             th =has_file(task)
-
+-else
+  b=t(:no_tasks)
 
