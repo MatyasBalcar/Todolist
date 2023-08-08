@@ -3,7 +3,7 @@ p style="color: green" = notice
 
 -if !@projects.blank?
   h1 =t(:projects)
-  == pagy_nav(@pagy, prev: t(:prev, scope: 'pagy'), next: t(:next, scope: 'pagy'))
+  == pagy_nav(@pagy)
 
 
   #projects

@@ -123,4 +123,6 @@ cs:
   no_projects: "Nemáte žádné projekty"
   no_user_projects: "Nemáte žádné projekty, můžete je vytvořit zde: "
 
+  no_tasks_for_project: "Nemáte žádné úkoly pro tento projekt"
+
 

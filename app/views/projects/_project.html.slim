@@ -1,7 +1,7 @@
 
   div id="#{dom_id project}"
 
-    h3
+    h4
       =< project.title
     p
       h5 =t(:position) +" :"+ project.position.to_s
@@ -13,36 +13,38 @@
       = button_to t(:delete_project), project_path(project), method: :delete, form: { data: { turbo_confirm: 'Are you sure you want to delete this project?' } }, class: "btn btn-outline-danger"
 
 
+    -if !project.tasks.blank?
+      p
+        h2 = t(:tasks)
 
-    p
-      h2 = t(:tasks)
 
-
-    table class='table'
-      thead class="thead-dark"
-        tr
-          th =t(:title)
-          th =t(:description)
-          th =t(:number_of_tags)
-          th =t(:done)
-          th =t(:state)
-          th =t(:edit_task)
-          th =t(:delete)
-          th =t(:file)
-
-      - project.tasks.each do |task|
-
-        tbody
+      table class='table'
+        thead class="thead-dark"
           tr
-            th =task.title
-            th =has_description(task)
-            th =task.tags.size
-            th =done(task.is_done)
-            th =link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
+            th =t(:title)
+            th =t(:description)
+            th =t(:number_of_tags)
+            th =t(:done)
+            th =t(:state)
+            th =t(:edit_task)
+            th =t(:delete)
+            th =t(:file)
 
-            th
-              = link_to t(:edit_task),edit_task_path(task), class:"btn btn-outline-dark"
-            th = button_to t(:delete_task), task_path(task), method: :delete, form: { data: { turbo_confirm: 'Are you sure' } }, class: "btn btn-outline-danger"
+        - project.tasks.each do |task|
+
+          tbody
+            tr
+              th =task.title
+              th =has_description(task)
+              th =task.tags.size
+              th =done(task.is_done)
+              th =link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
+
+              th
+                = link_to t(:edit_task),edit_task_path(task), class:"btn btn-outline-dark"
+              th = button_to t(:delete_task), task_path(task), method: :delete, form: { data: { turbo_confirm: 'Are you sure' } }, class: "btn btn-outline-danger"
 
 
-            th =has_file(task)
+              th =has_file(task)
+    else
+      b =t(:no_tasks_for_project)
