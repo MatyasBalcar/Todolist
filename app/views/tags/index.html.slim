@@ -2,8 +2,9 @@ p style="color: green" = notice
 
 
 
-h2 = t(:tags)
+
 -if !@tags.blank?
+  h2 = t(:tags)
   table class='table'
     thead class="thead-dark"
       tr
@@ -18,6 +19,7 @@ h2 = t(:tags)
 
   = link_to t(:new_tag), new_tag_path, class:"btn btn-outline-dark"
 -else
-  =t(:no_tags)
+  b
+    =t(:no_tags)
   br
   =link_to t(:user_ads_new_tag), new_tag_path, class:"btn btn-outline-dark"
