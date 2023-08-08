@@ -102,6 +102,7 @@ cs:
 
   back_to_tags: "Zpátky na štítky"
   user_ads_new_tag: "Štítek můžete vytvořit zde"
+  number_of_tags: "Počet štítků"
 
   name: "Jméno"
   surname: "Příjmení"
