@@ -44,6 +44,7 @@
         <li >
           <%=render 'search/form' %>
         </li>
+        <%= image_tag(current_user.avatar_thumbnail(75)) if current_user.file.attached? %>
         <%else %>
         <li class="nav-item ">
           <a class="nav-link" href="#"><%=link_to t(:signup), new_user_registration_path, class: "btn btn-outline-success" %> <span class="sr-only"></span></a>
