@@ -24,9 +24,7 @@
 
   </div>
 
-  <div class="field">
-    <%=f.file_field :avatar %>
-  </div>
+  <%=  current_user.file.blank? ? t(:no_file) : link_to(t(:view_file), current_user.file) %>
 
   <div class="form-actions">
     <%= f.button :submit, t(:update) %>

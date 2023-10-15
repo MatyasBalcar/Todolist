@@ -2,56 +2,42 @@ p style="color: green" = notice
 
 
 -if !@tasks.blank?
-  h3 = t(:chose_tasks)
-
-  - default_option = 'all'
-  - selected_task = params[:tasks_to_show] || default_option
-  = form_tag tasks_path(@tasks), method: :get , remote: true do
-    div.btn-group
-      = button_tag t(:show_all_tasks), type: 'submit', name: 'tasks_to_show', value: 'all',
-              class: "btn #{selected_task == 'all' ? 'btn-primary' : 'btn-outline-primary'}"
-
-      = button_tag t(:show_completed_tasks), type: 'submit', name: 'tasks_to_show', value: 'done',
-              class: "btn #{selected_task == 'done' ? 'btn-success' : 'btn-outline-success'}"
-
-      = button_tag t(:show_not_done_tasks), type: 'submit', name: 'tasks_to_show', value: 'not_done',
-              class: "btn #{selected_task == 'not_done' ? 'btn-danger' : 'btn-outline-danger'}"
 
 
-  - tasks_to_show = params[:tasks_to_show]
+
+  h2 = t(:tasks)
+  table class='table'
+    thead class="thead-dark"
+      tr
+        th = t(:title)
+        th = t(:description)
+        th = t(:tags)
+        th = t(:project)
+        //th = t(:done)
+        //th = t(:state)
+        th= t(:state)
+        th = t(:delete)
+        th = t(:edit_task)
+        th =t(:file)
+        th =t(:solver)
+
+    -@tasks.each do |task|
 
 
-    h2 = t(:tasks)
-    table class='table'
-      thead class="thead-dark"
+
+      tbody
         tr
-          th = t(:title)
-          th = t(:description)
-          th = t(:tags)
-          th = t(:project)
-          th = t(:done)
-          th = t(:state)
-          th = t(:delete)
-          th = t(:edit_task)
-          th =t(:file)
-          th =t(:solver)
-          - filtered_tasks = render_filtered_tasks(@tasks, tasks_to_show)
-      - filtered_tasks.each do |task|
-
-
-
-        tbody
-          tr
-            th = task.title
-            th=has_description(task)
-            th=task.tags.map(&:title).join(', ')
-            th = task.project.title
-            th = done(task.is_done)
-            th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
-            th = button_to t(:delete_task), task_path(task), method: :delete, :alert => "You haz errors!", class: "btn btn-outline-danger"
-            th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
-            th =has_file(task)
-            th =task.solverid
+          th = task.title
+          th=has_description(task)
+          th=tags(task)
+          th = task.project.title
+          //th = done(task.is_done)
+          //th = link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
+          th=task.state_advanced
+          th = button_to t(:delete_task), task_path(task), method: :delete, :alert => "You haz errors!", class: "btn btn-outline-danger"
+          th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
+          th =has_file(task)
+          th =(User.find(task.solver_id)).name
 -else
   b=t(:no_tasks)
 

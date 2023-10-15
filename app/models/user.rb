@@ -10,10 +10,8 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
   has_many :tasks , dependent: :destroy
   has_many :tags, dependent: :destroy
-  has_one_attached :avatar
+  has_one_attached :file
   #validates :avatar, presence: true
 
-  def avatar_thumbnail
-    avatar.variant(resize: "150x150!").processed if avatar.attached?
-  end
+
 end
