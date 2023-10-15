@@ -1,6 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.active_storage.variant_processor = :mini_magick
   config.after_initialize do
     Bullet.enable        = true
     Bullet.alert         = true

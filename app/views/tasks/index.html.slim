@@ -18,7 +18,7 @@ p style="color: green" = notice
               class: "btn #{selected_task == 'not_done' ? 'btn-danger' : 'btn-outline-danger'}"
 
 
-  - tasks_to_show = params[:tasks_to_show] || default_option
+  - tasks_to_show = params[:tasks_to_show]
 
 
     h2 = t(:tasks)
@@ -34,6 +34,7 @@ p style="color: green" = notice
           th = t(:delete)
           th = t(:edit_task)
           th =t(:file)
+          th =t(:solver)
           - filtered_tasks = render_filtered_tasks(@tasks, tasks_to_show)
       - filtered_tasks.each do |task|
 
@@ -50,6 +51,7 @@ p style="color: green" = notice
             th = button_to t(:delete_task), task_path(task), method: :delete, :alert => "You haz errors!", class: "btn btn-outline-danger"
             th = link_to t(:edit_task),edit_task_path(task), class:"btn btn-dark"
             th =has_file(task)
+            th =task.solver_id
 -else
   b=t(:no_tasks)
 

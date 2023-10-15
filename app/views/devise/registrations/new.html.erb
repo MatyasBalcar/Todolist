@@ -1,6 +1,6 @@
 <h2><%= t(:signup)%></h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),html: { multipart: true })  do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -30,7 +30,7 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
   </div>
-
+  <%= f.input :avatar, as: :file, label: t(:avatar) %>
   <div class="form-actions">
     <%= f.button :submit, t(:signup) %>
   </div>

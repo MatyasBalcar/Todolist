@@ -12,6 +12,10 @@
               :input_html => { value:current_user.id},
               id: :project_user_id,
               as: :hidden
+      = f.input :creation_date,
+              required: true,
+              input_html: { value: Date.today },
+              as: :hidden
 
 
   div style="margin-left: 20px"

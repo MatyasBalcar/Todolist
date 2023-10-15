@@ -22,6 +22,10 @@
         = link_to t(:user_ads_new_tag), new_tag_path, class: "btn btn-outline-dark"
 
       =f.input :file, as: :file, label: t(:file)
+      =f.input :solver_id ,
+              :input_html => { value:current_user.id},
+              as: :hidden
+      = f.input :solver_id, collection: User.all, label_method: :name, value_method: :id, include_blank: true
 
   div style="margin-left: 20px"
     .form-actions
