@@ -25,8 +25,8 @@
       =f.input :solver_id ,
               :input_html => { value:current_user.id},
               as: :hidden
-      =f.input :state_advanced, label: t(:state), collection:["novy", "ceka na klienta", "v reseni", "hotovo"],:input_html=>{value:"novy"}
-      = f.input :solver_id, collection: User.all, label_method: :name, value_method: :id, include_blank: true,required: true
+      =f.input :state_advanced, label: t(:state), collection:["novy", "ceka na klienta", "v reseni", "hotovo"],selected: "novy"
+      = f.input :solver_id, collection: User.all, label_method: :name, value_method: :id, include_blank: true,required: true,selected: current_user.id
 
   div style="margin-left: 20px"
     .form-actions
