@@ -29,6 +29,7 @@
             th =t(:number_of_tags)
             //th =t(:done)
             //th =t(:state)
+            th =t(:state)
             th =t(:edit_task)
             th =t(:delete)
             th =t(:file)
@@ -44,7 +45,8 @@
               th =task.tags.size
               //th =done(task.is_done)
               //th =link_to(t(!task.is_done ? :done : :todo), toggle_done_path(id: task.id), class: "btn btn-outline-success")
-
+              //advanced_state
+              th =task.state_advanced
               th
                 = link_to t(:edit_task),edit_task_path(task), class:"btn btn-outline-dark"
               th = button_to t(:delete_task), task_path(task), method: :delete, form: { data: { turbo_confirm: 'Are you sure' } }, class: "btn btn-outline-danger"
