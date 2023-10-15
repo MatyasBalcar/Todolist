@@ -11,7 +11,9 @@ class User < ApplicationRecord
   has_many :tasks , dependent: :destroy
   has_many :tags, dependent: :destroy
   has_one_attached :file
-  #validates :avatar, presence: true
-
+  validates :file, presence: true
+  def avatar_thumbnail
+    file.variant(resize: "150x150!").processed
+  end
 
 end
