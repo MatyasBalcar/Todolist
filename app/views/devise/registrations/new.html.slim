@@ -26,7 +26,7 @@ h2 = t(:signup)
             label: t(:confirm_password),
             required: true,
             input_html: { autocomplete: "new-password" }
-    =f.input :file, as: :file, label: t(:file)
+    =f.file_field :file, as: :file, label: t(:file)
 
   .form-actions
     = f.button :submit, t(:signup)
