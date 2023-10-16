@@ -1,0 +1,25 @@
+%h1.text-center
+  = pluralize(@combined_results.count, t(:result))
+= render 'search/form'
+
+.container
+  %table.table.table-dark
+    %thead
+      %tr
+        %th= sort_link(@query,:title, "Title",)
+
+    %tbody
+      - @combined_results.each do |combined_result|
+        %tr
+          %td
+            - if combined_result.is_a?(Project)
+              %p Project
+              = link_to render_highlighted_title(combined_result, @query.title_cont)
+
+            - elsif combined_result.is_a?(Task)
+              %p Task
+              = link_to render_highlighted_title(combined_result, @query.title_cont)
+
+            - elsif combined_result.is_a?(Tag)
+              %p Tag
+              = link_to render_highlighted_title(combined_result, @query.title_cont)
