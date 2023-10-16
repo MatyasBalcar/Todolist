@@ -1,0 +1,19 @@
+.container.m-0
+  %p(style="color: green")= notice
+
+  - if !@projects.blank?
+    %h1= t(:projects)
+    = pagy_nav(@pagy)
+
+    #projects
+      = turbo_frame_tag :projects do
+        = render @projects
+
+    = turbo_frame_tag :pagination,
+          loading: :lazy,
+          src: projects_path(format: :turbo_stream)
+  - else
+    %p
+      %b= t(:no_user_projects)
+      %br
+      = link_to t(:new_project), new_project_path, class: "btn btn-outline-dark"

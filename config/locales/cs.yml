@@ -117,6 +117,7 @@ cs:
   surname: "Příjmení"
   password: "Heslo"
   confirm_password: "Potvrdit heslo"
+  current_password: "Stávající heslo"
 
   remember_me: "Zůstat přihlášen"
   forgot_password: "Zapomenuté heslo?"
@@ -130,5 +131,8 @@ cs:
 
   created_at: "Vytvoreno: "
 
+  all_users: "Všichni uživatelé"
+
+  solver: "Řešitel"
 
 

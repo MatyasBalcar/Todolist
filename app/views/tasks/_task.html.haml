@@ -1,17 +1,17 @@
--if task.user==current_user
-  div id="#{dom_id task}"
-    p
-      strong Title:
-      =< task.title
-    p
-      strong Description:
-      =< task.description
-    p
-      strong Is done:
-      =< task.is_done
-    p
-      strong User:
-      =< task.user_id
-    p
-      strong Project:
-      =< task.project_id
+- if task.user == current_user
+  .task#{dom_id task}
+    %p
+      %strong Title:
+        = task.title
+    %p
+      %strong Description:
+        = task.description
+    %p
+      %strong Is done:
+        = task.is_done
+    %p
+      %strong User:
+        = task.user_id
+    %p
+      %strong Project:
+        = task.project_id

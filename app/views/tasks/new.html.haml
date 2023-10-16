@@ -1,9 +1,10 @@
-h1 =t(:new_task)
+%h1= t(:new_task)
 
-== render "form", task: @task
-br
+= render "form", task: @task
 
-div
-  = link_to t(:back_to_tasks), tasks_path, class:"btn btn-outline-dark"
-  '|
+%br
+
+.container.m-0
+  = link_to t(:back_to_tasks), tasks_path, class: "btn btn-outline-dark"
+  |
   = link_to t(:show_projects), projects_path, class: "btn btn-outline-primary"

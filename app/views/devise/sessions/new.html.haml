@@ -1,17 +1,10 @@
 %h2= t(:signin)
-%div{:style => "margin-left:20px"}
+%div{style: "margin-left: 20px"}
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .form-inputs
-    = f.input :email,
-      required: false,
-      autofocus: true,
-      required: true,
-      input_html: { autocomplete: email }
-    = f.input :password,
-      required: false,
-      input_html: { autocomplete: current-password },
-      required: true,
-      label: t(:password)
-    = f.input :remember_me, label: t(:remember_me),as: :boolean if devise_mapping.rememberable?
-.form-actions
-  = f.button :submit, t(:signin)
+      = f.input :email, required: true, autofocus: true
+      = f.input :password, required: true,  label: t(:password)
+      - if devise_mapping.rememberable?
+        = f.input :remember_me, label: t(:remember_me), as: :boolean
+    .form-actions
+      = f.button :submit, t(:signin)

@@ -1,11 +1,11 @@
-= simple_form_for(@tag) do |f|
+= simple_form_for @tag do |f|
   = f.error_notification
-  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+  - if f.object.errors[:base].present?
+    = f.error_notification message: f.object.errors[:base].to_sentence
 
   .form-inputs
     = f.input :title, label: t(:title)
-    = f.input :user_id,
-            :input_html => { value:current_user.id},
-            as: :hidden
+    = f.input :user_id, input_html: { value: current_user.id }, as: :hidden
+
   .form-actions
     = f.button :submit, t(:new_tag)

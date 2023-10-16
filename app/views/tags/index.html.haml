@@ -1,25 +1,23 @@
-p style="color: green" = notice
+.container.m-0
+  %p(style="color: green")= notice
 
+  - if !@tags.blank?
+    %h2= t(:tags)
+    %table.table.thead-dark
+      %tr
+        %th= t(:title)
+        %th= t(:tag_action)
 
+      %tbody
+        - @tags.each do |tag|
+          %tr
+            %th= tag.title
+            %th= link_to t(:edit_tag), tag, class: "btn btn-outline-success"
 
+    = link_to t(:new_tag), new_tag_path, class: "btn btn-outline-dark"
 
--if !@tags.blank?
-  h2 = t(:tags)
-  table class='table'
-    thead class="thead-dark"
-      tr
-        th = t(:title)
-        th = t(:tag_action)
-
-    tbody
-      - @tags.each do |tag|
-        tr
-          th = tag.title
-          th = link_to t(:edit_tag), tag, class:"btn btn-outline-success"
-
-  = link_to t(:new_tag), new_tag_path, class:"btn btn-outline-dark"
--else
-  b
-    =t(:no_tags)
-  br
-  =link_to t(:user_ads_new_tag), new_tag_path, class:"btn btn-outline-dark"
+  - else
+    %b
+      = t(:no_tags)
+    %br
+    = link_to t(:user_ads_new_tag), new_tag_path, class: "btn btn-outline-dark"

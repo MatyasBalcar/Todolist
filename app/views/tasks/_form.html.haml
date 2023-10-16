@@ -1,7 +1,8 @@
-= simple_form_for @task ,html: { multipart: true } do |f|
-  = f.error_notification
-  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-  div style="margin-left: 20px"
+.container.m-0
+  = simple_form_for @task, html: { multipart: true } do |f|
+    = f.error_notification
+    = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
     .form-inputs
       = f.input :title, label: t(:title)
       = f.input :description, label: t(:description)
@@ -16,9 +17,9 @@
       -if !Tag.for_user(current_user).blank?
         =f.association :tags,collection:Tag.for_user(current_user), as: :check_boxes,item_wrapper_class: 'checkbox_container',label: t(:tags)
       -else
-        b
+        %b
           =t(:no_tags)
-        br
+        %br
         = link_to t(:user_ads_new_tag), new_tag_path, class: "btn btn-outline-dark"
 
       =f.input :file, as: :file, label: t(:file)
@@ -28,6 +29,5 @@
       =f.input :state_advanced, label: t(:state), collection:["novy", "ceka na klienta", "v reseni", "hotovo"],selected: "novy"
       = f.input :solver_id, collection: User.all, label_method: :name, value_method: :id, include_blank: true,required: true,selected: current_user.id
 
-  div style="margin-left: 20px"
     .form-actions
-      = f.button :submit, class:"btn btn-success"
+      = f.button :submit, class: "btn btn-success"

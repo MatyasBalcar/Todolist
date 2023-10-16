@@ -9,16 +9,21 @@
     = f.input :password,
       hint: t(:leave_blank_password),
       required: false,
-      input_html: { autocomplete: "new-password" }
+      input_html: { autocomplete: "new-password" },
+      label: t(:password)
     = f.input :password_confirmation,
       required: false,
-      input_html: { autocomplete: "new-password" }
+      input_html: { autocomplete: "new-password" },
+      label: t(:confirm_password)
     = f.input :current_password,
       hint: t(:password_needed),
       required: true,
-      input_html: { autocomplete: "current-password" }
+      input_html: { autocomplete: "current-password" },
+      label: t(:current_password)
+  %b Avatar:
+  %br
   = image_tag(resource.avatar_thumbnail(150)) if resource.file.attached?
-  = f.input :file, as: :file, label: t(:avatar)
+  = f.input :file, as: :file, label: ''
   .form-actions
     = f.button :submit, t(:update)
 %h3= t(:cancel_account)
