@@ -1,6 +1,6 @@
 %li
-  = search_form_for(@query, url: search_path, method: :get, class:"d-flex") do |f|
-    = f.search_field :title_cont,                        |
-                         placeholder: t(:search)+"..." , |
-      class:"form-control me-2"                          |
-    = f.submit t(:search) +"!",class:"btn btn-outline-success"
+  = search_form_for(@query, url: search_path, method: :get, class: "d-flex") do |f|
+    = f.search_field :title_cont,
+                         placeholder: t(:search)+"..." ,
+      class: "form-control me-2"
+    = f.submit t(:search) +"!",class: "btn btn-outline-success"

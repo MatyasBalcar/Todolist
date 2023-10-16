@@ -1,16 +1,16 @@
-h2 =t(:users)
+%h2= t(:users)
+
 .container.ml-0.pl-0.me-0.pr-0.w-75
-  table class='table table-bordered table-hover table-sm'
-    thead class="thead-light"
-      tr
-        th =t(:name)
-        th =t(:surname)
-        th =t(:email)
+  %table.table.table-bordered.table-hover.table-sm{thead: {class: "thead-light"}}
+    %thead
+      %tr
+        %th= t(:name)
+        %th= t(:surname)
+        %th= t(:email)
 
-    - @users.each do |user|
-
-      tbody
-        tr
-          th =user.name.capitalize
-          th =user.surname.capitalize
-          th =user.email
+    %tbody
+      - @users.each do |user|
+        %tr
+          %th= user.name.capitalize
+          %th= user.surname.capitalize
+          %th= user.email

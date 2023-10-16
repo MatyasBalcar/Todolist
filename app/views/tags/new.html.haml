@@ -1,8 +1,8 @@
-h1 =t(:new_tag)
+%h1= t(:new_tag)
 
-== render "form", tag: @tag
+= render "form", tag: @tag
 
-br
+%br
 
-div
-  = link_to t(:back_to_tags), tags_path, class:"btn btn-outline-dark"
+.container
+  = link_to t(:back_to_tags), tags_path, class: "btn btn-outline-dark"
