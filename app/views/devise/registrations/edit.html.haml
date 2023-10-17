@@ -26,7 +26,7 @@
   = image_tag(resource.avatar_thumbnail(150,current_user))
 
 
-  = f.input :file, as: :file, label: ''
+  = f.input :file, as: :file, label: false
   .form-actions
 
     = f.button :submit, t(:update)

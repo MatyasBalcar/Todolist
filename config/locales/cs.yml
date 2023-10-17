@@ -51,6 +51,9 @@ cs:
   unhappy: "Nejste spokojení?"
   edit_user: "Upravit účet"
 
+  profile: "Profil"
+  number_of_tasks: "Pocet ukolu"
+
   new_project: "Vytvořit nový projekt"
   projects: "Projekty"
   show_project: "Ukaž tento projekt"
