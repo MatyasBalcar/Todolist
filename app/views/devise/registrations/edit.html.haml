@@ -22,7 +22,10 @@
       label: t(:current_password)
   %b Avatar:
   %br
-  = image_tag(resource.avatar_thumbnail(150)) if resource.file.attached?
+  -if current_user.file.attached?
+    = image_tag(resource.avatar_thumbnail(150))
+  -else
+    =image_tag('/default_avatar.png')
   = f.input :file, as: :file, label: ''
   .form-actions
     = f.button :submit, t(:update)

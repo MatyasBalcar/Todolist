@@ -40,7 +40,9 @@
         %li
           .dropdown
             %button.btn.btn-secondary.p-0{type: "button", id: "dropdownMenuButton", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", class: "rounded-circle"}
-              = image_tag(current_user.avatar_thumbnail(75),class: "rounded-circle border border-primary ") if current_user.file.attached?
+
+              = image_tag(current_user.avatar_thumbnail(75,current_user),class: "rounded-circle border border-primary ")
+
             .dropdown-menu.dropdown-menu-right
               %a.dropdown-item{href: "#"}
                 = link_to t(:signout), destroy_user_session_path,:method => :get, class: "btn btn-outline-dark"
