@@ -22,12 +22,13 @@
       label: t(:current_password)
   %b Avatar:
   %br
-  -if current_user.file.attached?
-    = image_tag(resource.avatar_thumbnail(150))
-  -else
-    =image_tag('/default_avatar.png')
+
+  = image_tag(resource.avatar_thumbnail(150,current_user))
+
+
   = f.input :file, as: :file, label: ''
   .form-actions
+
     = f.button :submit, t(:update)
 %h3= t(:cancel_account)
 %div
