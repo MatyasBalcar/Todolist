@@ -55,13 +55,19 @@ class ProjectsController < ApplicationController
 
   # DELETE /projects/1 or /projects/1.json
   def destroy
-    @project.destroy
-
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
-      format.json { head :no_content }
+
+    if current_user.tasks.blank?
+      @project.destroy
+
+        format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
+    else
+
+        format.html { redirect_to projects_url, notice: "Project can not be destroyed." }
+
+      end
     end
-  end
+    end
   def correct_user
     @project=current_user.projects.find_by(id: params[:id])
   end
